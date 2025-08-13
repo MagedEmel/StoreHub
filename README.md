@@ -133,21 +133,15 @@ storehub/
 
 ---
 
-## 🧑‍💻 مطور المشروع
+## 🧑‍💻 مطورين المشروع
 
-> **فادي أشرف صلاح** — *Police Tech Developer 🚔*
+> **Maged Emel Sobhy**
 
-- GitHub: [fadya5323](https://github.com/fadya5323)
-- LinkedIn: [Fady Ashraf Salah](#)
-- Email: fadya5323@gmail.com
+- GitHub: [MagedEmel](https://github.com/MagedEmel)
+- LinkedIn: [Maged Emel Sobhy](#)
+- Email: magedemel007@gmail.com
 
+> **Mariam Ayman Saeed**
+- GitHub: [[]]
 ---
-
-## 💬 ملاحظة خفيفة
-
-> لو واجهتك أي مشكلة أثناء الإعداد، اتأكد من إنك مثبت نفس الإصدارات اللي فوق عشان تتفادى مشاكل التعارض. ✌️
-
----
-
-*Developed with ❤️ by Fady Ashraf Salah*
 
