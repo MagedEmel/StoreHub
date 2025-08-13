@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet" />
+
+    <!--Link Swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <title>Store Hub | Main</title>
+  </head>
+  <body class="light">
+    <!--Header-->
+    <header>
+      <div class="container">
+        <nav>
+          <h1>STOREHUB</h1>
+          <div class="linkes">
+            <a href="index.html" class="active">
+              <p>Home</p>
+            </a>
+            <a href="allproduct.html">
+              <p>All Product</p>
+            </a>
+            <a href="about.html">
+              <p>About</p>
+            </a>
+            <a href="contact.html">
+              <p>Contact</p>
+            </a>
+          </div>
+          <form class="header-form">
+            <input type="search" placeholder="Seacrch" class="seacrch" />
+            <a href="{% url 'wishlist' %}"
+              ><i class="fa-regular fa-heart"></i
+            ></a>
+            <a href="{% url 'cart' %}"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+            <a href="#" id="user-icon">
+              <i class="fa-regular fa-user"></i>
+            </a>
+
+            <div class="user-menu" id="accountDropdown">
+              <ul>
+                <li>
+                  <a href="{% url 'account' %}">
+                    <i class="fa-regular fa-user"></i> Manage My Account</a
+                  >
+                </li>
+                <li>
+                  <a href="#"> <i class="fa-solid fa-box"></i> My Order</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-ban"></i> My Cancellations</a
+                  >
+                </li>
+                <li>
+                  <a href="#"> <i class="fa-regular fa-star"></i> My Reviews</a>
+                </li>
+              </ul>
+            </div>
+
+            <input type="checkbox" id="toggle" />
+
+            <label class="toggle" for="toggle">
+              <i class="bx bxs-sun"></i>
+              <i class="bx bx-moon"></i>
+              <span class="ball"></span>
+            </label>
+          </form>
+        </nav>
+      </div>
+    </header>
+
+    <!--Section One-->
+    <section class="slider">
+      <div class="container">
+        <div class="side_bar">
+          <a href="#">Men's Fashion</a>
+          <a href="#">Woman's Fashion</a>
+          <a href="#">Electronics</a>
+          <a href="#">Medicine</a>
+          <a href="#">Phone & Tablet</a>
+          <a href="#">Sportes & Outdoor</a>
+          <a href="#">Fashion & Clothings</a>
+          <a href="#">TV & Audio</a>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="images/phoneBanner.jpg" alt="banner1" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/banner2.jpeg" alt="banner2" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/banner3.jpeg" alt="banner3" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/banner4.jpeg" alt="banner4" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/banner5.jpeg" alt="banner5" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Two-->
+    <section class="offer">
+      <div class="container">
+        <div class="dayOffers">
+          <span class="shape">.</span>
+          <h3>Today's</h3>
+        </div>
+      </div>
+    </section>
+
+    <!--Section There-->
+    <section class="timer">
+      <div class="container">
+        <div class="flex">
+          <h2>FLASH SALES</h2>
+          <div class="dateAndClock">
+            <div class="date">
+              <h3>Days</h3>
+              <h3>Hours</h3>
+              <h3>Minute</h3>
+              <h3>Second</h3>
+            </div>
+            <div class="clock">
+              <h2 class="day">00:</h2>
+              <h2 class="hour">00:</h2>
+              <h2 class="minut">00:</h2>
+              <h2 class="second">00</h2>
+            </div>
+          </div>
+        </div>
+        <div class="mySwiper">
+          <div class="swiper-button-next btn_swip btSwapProNext"></div>
+          <div class="swiper-button-prev btn_swip btSwapProPrev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--Swiper Section Four-->
+    <section class="pro-div">
+      <div class="container">
+        <div class="products mySwiper">
+          <div class="product swiper-wrapper">
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-40%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/game.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5>HAVIT HV-G92 Gamepad</h5>
+                <div class="sallery">
+                  <span class="new-sall">$120</span>
+                  <span class="old-sall">$160</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-35%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/keyboard.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5 id="name">AK-900 Wired Keyboard</h5>
+                <div class="sallery">
+                  <span class="new-sall">$960</span>
+                  <span class="old-sall">$1160</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-30%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/lcd.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5 id="name">IPS LCD Gaming Monitor</h5>
+                <div class="sallery">
+                  <span class="new-sall">$370</span>
+                  <span class="old-sall">$400</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-25%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/chair.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5 id="name">S-Series Comfort Chair</h5>
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                  <span class="old-sall">$400</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-40%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/speaker.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5 id="name">HAVIT HV-G92 Gamepad</h5>
+                <div class="sallery">
+                  <span class="new-sall">$120</span>
+                  <span class="old-sall">$160</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-40%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/laptop.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5 id="name">HAVIT HV-G92 Gamepad</h5>
+                <div class="sallery">
+                  <span class="new-sall">$120</span>
+                  <span class="old-sall">$160</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide pro">
+              <div class="icons">
+                <div class="sall"><span>-40%</span></div>
+                <div class="icon">
+                  <i class="fa-regular fa-heart" id="iconheart"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="addcart">
+                <div class="text">
+                  <p>Add To Cart</p>
+                </div>
+              </div>
+              <div class="img">
+                <a href="#">
+                  <img src="images/car.png" alt="" />
+                </a>
+              </div>
+              <div class="detailes">
+                <h5 id="name">HAVIT HV-G92 Gamepad</h5>
+                <div class="sallery">
+                  <span class="new-sall">$120</span>
+                  <span class="old-sall">$160</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Five-->
+    <section>
+      <div class="container">
+        <div class="bttnAllProduct">
+          <a href="allproduct.html">
+            <button>View All Products</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Six-->
+    <section id="browseCat">
+      <div class="container">
+        <div class="browseCat">
+          <div class="categText">
+            <span class="shape">.</span>
+            <h3>Categories</h3>
+          </div>
+          <div class="catbtnswap mySwiper">
+            <h3>Browse By Category</h3>
+            <div class="swiper-button-next btn_swip btnSwapNext"></div>
+            <div class="swiper-button-prev btn_swip BtnSwapPrev"></div>
+          </div>
+        </div>
+        <div class="categs mySwiper">
+          <div class="categ swiper-wrapper">
+            <div class="categ swiper-slide">
+              <div class="cat">
+                <h2>Phones</h2>
+                <i class="fa-solid fa-mobile"></i>
+              </div>
+            </div>
+            <div class="categ swiper-slide">
+              <div class="cat">
+                <h2>Computers</h2>
+                <i class="fa-solid fa-tv"></i>
+              </div>
+            </div>
+            <div class="categ swiper-slide">
+              <div class="cat">
+                <h2>Camera</h2>
+                <i class="fa-solid fa-camera"></i>
+              </div>
+            </div>
+            <div class="categ swiper-slide">
+              <div class="cat">
+                <h2>HeadPhones</h2>
+                <i class="fa-solid fa-headphones"></i>
+              </div>
+            </div>
+            <div class="categ swiper-slide">
+              <div class="cat">
+                <h2>Gaming</h2>
+                <i class="fa-solid fa-keyboard"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Seven-->
+    <section class="BestSellingProducts">
+      <div class="container">
+        <div class="top">
+          <div class="shape-text">
+            <span class="shape">.</span>
+            <h5 class="txt">This Month</h5>
+          </div>
+          <div class="bttn">
+            <h4>Best Selling Products</h4>
+            <a href="allproduct.html">
+              <button>View All</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="bttom">
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/game.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">HAVIT HV-G92 Gamepad</h5>
+              <div class="sallery">
+                <span class="new-sall">$120</span>
+                <span class="old-sall">$160</span>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(88)</span>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/keyboard.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">AK-900 Wired Keyboard</h5>
+              <div class="sallery">
+                <span class="new-sall">$960</span>
+                <span class="old-sall">$1160</span>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(88)</span>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/lcd.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">IPS LCD Gaming Monitor</h5>
+              <div class="sallery">
+                <span class="new-sall">$370</span>
+                <span class="old-sall">$400</span>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(88)</span>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/chair.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="sallery">
+                <span class="new-sall">$375</span>
+                <span class="old-sall">$400</span>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(88)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Eghit-->
+    <section class="banner-section">
+      <div class="container">
+        <div class="banner-text">
+          <h5>Categories</h5>
+          <h1>Enhance Your <br />Music Experience</h1>
+          <button>Buy Now!</button>
+        </div>
+        <div class="image-container">
+          <div class="glow-effect"></div>
+          <img src="images/jblSpeacker.png" alt="Speaker" />
+        </div>
+      </div>
+    </section>
+
+    <!--Section Nine-->
+    <section class="ourproduct">
+      <div class="container">
+        <div class="ourprotext">
+          <span class="shape">.</span>
+          <p>Our Products</p>
+        </div>
+        <h3>Explore Our Products</h3>
+        <div class="products">
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/camera.png" alt="" />
+              </a>
+            </div>
+
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/laptop.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/lcd.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/car.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/sports boot.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/keybad.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/jacket.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro">
+            <div class="icons">
+              <div class="icon">
+                <i class="fa-regular fa-heart" id="iconheart"></i>
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+            <div class="addcart">
+              <div class="text">
+                <p>Add To Cart</p>
+              </div>
+            </div>
+            <div class="img">
+              <a href="#">
+                <img src="images/laptop.png" alt="" />
+              </a>
+            </div>
+            <div class="detailes">
+              <h5 id="name">S-Series Comfort Chair</h5>
+              <div class="dis">
+                <div class="sallery">
+                  <span class="new-sall">$375</span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(88)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="allproduct.html">
+          <button>View All Products</button>
+        </a>
+      </div>
+    </section>
+
+    <!--Section Ten-->
+    <section class="newArrival">
+      <div class="container">
+        <div class="featured">
+          <span class="shape">.</span>
+          <p>Featured</p>
+        </div>
+        <h2>New Arrival</h2>
+        <div class="imges">
+          <div class="leftSideImg">
+            <div>
+              <img src="images/PS.png" alt="PlayStation 5" />
+              <h4>PlayStation 5</h4>
+              <p>Black and White version of the PS5 coming out on sale.</p>
+            </div>
+          </div>
+          <div class="RightSideImg">
+            <div class="rightTop">
+              <div>
+                <img src="images/ss.jpeg" alt="Women's Collections" />
+                <h4>Women’s Collections</h4>
+                <p>Featured woman collections that give you another vibe.</p>
+              </div>
+            </div>
+            <div class="rightBttom">
+              <div class="rightBttomLeft">
+                <div>
+                  <img src="images/speakerAZ.png" alt="Speakers" />
+                  <h4>Speakers</h4>
+                  <p>Amazon wireless speakers</p>
+                </div>
+              </div>
+              <div class="rightBttomRight">
+                <div>
+                  <img src="images/gucci.png" alt="Perfume" />
+                  <h4>Perfume</h4>
+                  <p>GUCCI INTENSE OUD EDP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section Eleven-->
+    <section class="features">
+      <div class="container">
+        <div class="f1">
+          <div class="out">
+            <div class="in">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+          </div>
+          <h3>FREE AND FAST DELIVERY</h3>
+          <p>Free delivery for all orders over $140</p>
+        </div>
+        <div class="f2">
+          <div class="out">
+            <div class="in">
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+          </div>
+          <h3>24/7 CUSTOMER SERVICE</h3>
+          <p>Friendly 24/7 customer support</p>
+        </div>
+        <div class="f3">
+          <div class="out">
+            <div class="in">
+              <i class="fa-regular fa-square-check"></i>
+            </div>
+          </div>
+          <h3>MONEY BACK GUARANTEE</h3>
+          <p>We reurn money within 30 days</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+      <div class="container">
+        <div class="foot1">
+          <h3>STOREHUB</h3>
+          <a href="#">
+            <p>Subscribe</p>
+          </a>
+          <a href="#">
+            <p>Get 10% off your first order</p>
+          </a>
+          <input
+            type="email"
+            class="seacrch"
+            placeholder="Enter Your Email : " />
+        </div>
+        <div class="foot2">
+          <h3>Support</h3>
+          <a href="#">
+            <p>NATU - NEW ASSUIT</p>
+          </a>
+          <a href="#">
+            <p>StoreHub@gmail.com</p>
+          </a>
+          <a href="#">
+            <p>+201551803645</p>
+          </a>
+          <a href="#">
+            <p>+201551954315</p>
+          </a>
+        </div>
+        <div class="foot3">
+          <h3>Account</h3>
+          <a href="account.html">
+            <p>My Account</p>
+          </a>
+          <a href="#">
+            <p>Login / Register</p>
+          </a>
+          <a href="cart.html">
+            <p>Cart</p>
+          </a>
+          <a href="#">
+            <p>All Product</p>
+          </a>
+          <a href="#">
+            <p>Shop</p>
+          </a>
+        </div>
+        <div class="foot4">
+          <h3>Quick Link</h3>
+          <a href="#">
+            <p>Privacy Policy</p>
+          </a>
+          <a href="#">
+            <p>Terms Of Use</p>
+          </a>
+          <a href="#">
+            <p>FAQ</p>
+          </a>
+          <a href="contact.html">
+            <p>Contact</p>
+          </a>
+        </div>
+      </div>
+      <p style="text-align: center; padding-bottom: 8px">
+        Copyright &copy;<span> STOREHUB </span>all right reserved
+      </p>
+    </footer>
+
+    <script src="js/timer.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

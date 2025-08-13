@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Store Hub | Delivery Earnings</title>
+  </head>
+
+  <body class="light">
+    <!-- ==> Start Delivary Earnings <== -->
+    <div class="earnings-containar">
+      <div class="earnings-container">
+        <div class="earnings-box">
+          <div class="earnings-content">
+            <div class="earnings-text">Total Earnings</div>
+            <div class="total-earnings">$4,285.50</div>
+            <div class="earnings-text">Available for withdrawal</div>
+          </div>
+          <button class="withdraw-btn">Withdraw Earnings</button>
+        </div>
+      </div>
+
+      <div class="earnings-filters">
+        <div class="earnings-filter-group">
+          <label class="earnings-filter-label">Date Range</label>
+          <select class="earnings-filter-select">
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+            <option selected>Custom Range</option>
+          </select>
+        </div>
+        
+        <div class="earnings-filter-group">
+          <label class="earnings-filter-label">From</label>
+          <input type="date" class="earnings-filter-input" value="2024-01-15" />
+        </div>
+        <div class="earnings-filter-group">
+          <label class="earnings-filter-label">To</label>
+          <input type="date" class="earnings-filter-input" value="2024-01-21" />
+        </div>
+        <div class="earnings-filter-group">
+          <label class="earnings-filter-label">Status</label>
+          <select class="earnings-filter-select">
+            <option>All Statuses</option>
+            <option>Completed</option>
+            <option>Pending</option>
+            <option>Cancelled</option>
+          </select>
+        </div>
+        <button class="earnings-filter-button">Apply Filters</button>
+      </div>
+
+      <div class="earnings-table-container">
+        <table class="earnings-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Date & Time</th>
+              <th>Customer</th>
+              <th>Status</th>
+              <th>Distance</th>
+              <th>Base Rate</th>
+              <th>Commission</th>
+              <th>Total Earnings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Order ID" class="earnings-table-id">#12345</td>
+              <td data-label="Date & Time" class="earnings-table-DateTime">Jan 15, 2024 - 14:30</td>
+              <td data-label="Customer" class="earnings-table-customer">
+                John D.
+              </td>
+              <td data-label="Status">
+                <span class="earnings-status-badge earnings-status-completed"
+                  >Completed</span
+                >
+              </td>
+              <td data-label="Distance" class="earnings-table-distance">
+                3.5 km
+              </td>
+              <td data-label="Base Rate" class="earnings-table-BaseRate">$12.00</td>
+              <td data-label="Commission" class="earnings-table-negative">
+                -$1.80
+              </td>
+              <td data-label="Total Earnings" class="earnings-table-positive">
+                $10.20
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Order ID" class="earnings-table-id">#12346</td>
+              <td data-label="Date & Time" class="earnings-table-DateTime">Jan 15, 2024 - 13:15</td>
+              <td data-label="Customer" class="earnings-table-customer">
+                Sarah M.
+              </td>
+              <td data-label="Status">
+                <span class="earnings-status-badge earnings-status-completed"
+                  >Completed</span
+                >
+              </td>
+              <td data-label="Distance" class="earnings-table-distance">
+                4.2 km
+              </td>
+              <td data-label="Base Rate" class="earnings-table-BaseRate">$14.50</td>
+              <td data-label="Commission" class="earnings-table-negative">
+                -$2.18
+              </td>
+              <td data-label="Total Earnings" class="earnings-table-positive">
+                $12.32
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Order ID" class="earnings-table-id">#12347</td>
+              <td data-label="Date & Time" class="earnings-table-DateTime">Jan 15, 2024 - 12:45</td>
+              <td data-label="Customer" class="earnings-table-customer">
+                Mike R.
+              </td>
+              <td data-label="Status">
+                <span class="earnings-status-badge earnings-status-completed"
+                  >Completed</span
+                >
+              </td>
+              <td data-label="Distance" class="earnings-table-distance">
+                2.8 km
+              </td>
+              <td data-label="Base Rate" class="earnings-table-BaseRate">$10.00</td>
+              <td data-label="Commission" class="earnings-table-negative">
+                -$1.50
+              </td>
+              <td data-label="Total Earnings" class="earnings-table-positive">
+                $8.50
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Order ID" class="earnings-table-id">#12348</td>
+              <td data-label="Date & Time" class="earnings-table-DateTime">Jan 15, 2024 - 11:30</td>
+              <td data-label="Customer" class="earnings-table-customer">
+                Emma W.
+              </td>
+              <td data-label="Status">
+                <span class="earnings-status-badge earnings-status-pending"
+                  >Pending</span
+                >
+              </td>
+              <td data-label="Distance" class="earnings-table-distance">
+                5.0 km
+              </td>
+              <td data-label="Base Rate" class="earnings-table-BaseRate">$16.00</td>
+              <td data-label="Commission" class="earnings-table-negative">
+                -$2.40
+              </td>
+              <td data-label="Total Earnings" class="earnings-table-positive">
+                $13.60
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Order ID" class="earnings-table-id">#12349</td>
+              <td data-label="Date & Time" class="earnings-table-DateTime">Jan 15, 2024 - 10:15</td>
+              <td data-label="Customer" class="earnings-table-customer">
+                David L.
+              </td>
+              <td data-label="Status">
+                <span class="earnings-status-badge earnings-status-cancelled"
+                  >Cancelled</span
+                >
+              </td>
+              <td data-label="Distance" class="earnings-table-distance">
+                3.9 km
+              </td>
+              <td data-label="Base Rate" class="earnings-table-BaseRate">$13.50</td>
+              <td data-label="Commission" class="earnings-table-negative">
+                -$2.03
+              </td>
+              <td data-label="Total Earnings" class="earnings-table-positive">
+                $11.47
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination-containar">
+        <div class="pagination-info">Showing 1-5 of 156 orders</div>
+        <div class="pagination-controls">
+          <button class="earnings-pagination" disabled>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="earnings-pagination active">1</button>
+          <button class="earnings-pagination">2</button>
+          <button class="earnings-pagination">3</button>
+          <button class="earnings-pagination">4</button>
+          <button class="earnings-pagination">5</button>
+          <button class="earnings-pagination">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="summary-container">
+        <div class="summary-box">
+          <div class="summary-item">
+            <p class="summary-title">Total Orders</p>
+            <h3 class="summary-value">156</h3>
+          </div>
+          <div class="summary-item">
+            <p class="summary-title">Average Earning per Order</p>
+            <h3 class="summary-value">$27.47</h3>
+          </div>
+          <div class="summary-item">
+            <p class="summary-title">Commission Rate</p>
+            <h3 class="summary-value">15%</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      "use strict";
+const accountIcon = document.getElementById("user-icon");
+const accountDropdown = document.getElementById("accountDropdown");
+let isDropdownVisible = false;
+
+// Toggle dropdown when account icon is clicked
+accountIcon.addEventListener("click", (e) => {
+  e.stopPropagation();
+  isDropdownVisible = !isDropdownVisible;
+  if (isDropdownVisible) accountDropdown.classList.add("active");
+  else accountDropdown.classList.remove("active");
+});
+
+// Close dropdown when clicking elsewhere
+document.addEventListener("click", (e) => {
+  if (
+    isDropdownVisible &&
+    e.target !== accountIcon &&
+    !accountDropdown.contains(e.target)
+  ) {
+    accountDropdown.classList.remove("active");
+    isDropdownVisible = false;
+  }
+});
+
+const body = document.querySelector("body");
+const toggle = document.querySelector("#toggle");
+const sunIcon = document.querySelector(".toggle .bxs-sun");
+const moonIcon = document.querySelector(".toggle .bx-moon");
+
+toggle.addEventListener("change", () => {
+  body.classList.toggle("dark");
+  sunIcon.className =
+    sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
+  moonIcon.className =
+    moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
+  if (body.classList.contains("dark")) {
+    localStorage.setItem("DarkToogle", "Dark");
+  } else {
+    localStorage.removeItem("DarkToogle");
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("DarkToogle")) {
+    body.classList.add("dark");
+    sunIcon.className =
+      sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
+    moonIcon.className =
+      moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
+  }
+});
+
+let selectStatus = document.getElementById("selectStatus");
+
+selectStatus.addEventListener("change", () => {
+  const selected = selectStatus.value;
+  const rows = document.querySelectorAll(".table table tbody tr");
+
+  rows.forEach((row) => {
+    const statusSpan = row.querySelector(".status");
+
+    if (selected === "all") {
+      row.style.display = "";
+    } else {
+      const rowStatus = statusSpan.classList.contains(selected);
+      row.style.display = rowStatus ? "" : "none";
+    }
+  });
+});
+    </script>
+    <script src="mainDelivery.js"></script>
+  </body>
+</html>

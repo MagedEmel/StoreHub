@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet" />
+    <title>Store Hub | Sign Up</title>
+  </head>
+  <body class="light">
+    <!-- Start Sign -->
+    <div class="sign">
+      <div class="sign-container">
+        <div class="sign-image">
+          <img src="./images/Login.jpg" alt="Login Image" />
+        </div>
+        <div class="sign-form">
+          <h6>Create an account</h6>
+          <p>Enter your details below</p>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" required />
+              <label>Name</label>
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="email" required />
+              <label>Email</label>
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+              <input type="tel" required inputmode="numeric" />
+              <label>Phone Number</label>
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" required minlength="8" />
+              <label>Password</label>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" required minlength="8" />
+              <label>Confirm Password</label>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+              <select required>
+                <option value="" disabled selected>Select Your Role</option>
+                <option value="Customer">Customer</option>
+                <option value="Sale">Seller</option>
+                <option value="Delivery">Delivery</option>
+              </select>
+              <i class="fa-solid fa-user-tag"></i>
+            </div>
+            <div class="input-box">
+              <button type="submit"><span>Sign Up</span></button>
+            </div>
+            <div class="already-account">
+              Already have an account? <a href="login.html">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign -->
+
+    <script src="js/darkmode.js"></script>
+  </body>
+</html>

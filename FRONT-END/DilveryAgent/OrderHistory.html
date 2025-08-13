@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet" />
+
+    <title>Store Hub | Delivery | Order History</title>
+  </head>
+  <body class="light">
+    <header>
+      <div class="container">
+        <nav>
+          <h1>STOREHUB</h1>
+          <div class="linkes">
+            <a href="../index.html">
+              <p>Home</p>
+            </a>
+            <a href="../allproduct.html">
+              <p>All Product</p>
+            </a>
+            <a href="../about.html">
+              <p>About</p>
+            </a>
+            <a href="../contact.html">
+              <p>Contact</p>
+            </a>
+          </div>
+          <form class="header-form">
+            <input type="search" placeholder="Seacrch" class="seacrch" />
+            <a href="{% url '../wishlist' %}"
+              ><i class="fa-regular fa-heart"></i
+            ></a>
+            <a href="{% url 'cart' %}"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+            <a href="#" id="user-icon">
+              <i class="fa-regular fa-user"></i>
+            </a>
+
+            <div class="user-menu" id="accountDropdown">
+              <ul>
+                <li>
+                  <a href="{% url 'account' %}">
+                    <i class="fa-regular fa-user"></i> Manage My Account</a
+                  >
+                </li>
+                <li>
+                  <a href="#"> <i class="fa-solid fa-box"></i> My Order</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-ban"></i> My Cancellations</a
+                  >
+                </li>
+                <li>
+                  <a href="#"> <i class="fa-regular fa-star"></i> My Reviews</a>
+                </li>
+              </ul>
+            </div>
+
+            <input type="checkbox" id="toggle" />
+
+            <label class="toggle" for="toggle">
+              <i class="bx bxs-sun"></i>
+              <i class="bx bx-moon"></i>
+              <span class="ball"></span>
+            </label>
+          </form>
+        </nav>
+      </div>
+    </header>
+
+    <section class="text">
+      <div class="container">
+        <h3>Order History</h3>
+        <p>View and track your delivery records</p>
+        <select id="SelectDays" style="width: 150px">
+          <option>📅 Last 7 Days</option>
+          <option>📅 Last 10 Days</option>
+          <option>📅 Last 15 Days</option>
+          <option>📅 Last 30 Days</option>
+        </select>
+        <select id="selectStatus">
+          <option value="all">All Status</option>
+          <option value="completed">Completed</option>
+          <option value="failed">Failed</option>
+          <option value="in-progress">In Progress</option>
+        </select>
+        <input type="search" class="seacrch" placeholder="Search Order...." />
+      </div>
+    </section>
+
+    <section class="table">
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer Details</th>
+              <th>Delivery Time</th>
+              <th>Status</th>
+              <th>Commission</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ORD-2024-001</td>
+              <td>
+                Maged Emel<br />
+                <small>Naj-Hamadi Qena Egypt</small>
+              </td>
+              <td>Jan 15, 2024 14:30</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$12.50</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-001</td>
+              <td>
+                Maged Emel<br />
+                <small>Naj-Hamadi Qena Egypt</small>
+              </td>
+              <td>Mar 30, 2025 14:30</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$12.50</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-002</td>
+              <td>
+                Fady Ashraf<br />
+                <small>Minya Egypt</small>
+              </td>
+              <td>Jan 15, 2024 15:45</td>
+              <td><span class="status failed">Failed</span></td>
+              <td class="commission">$8.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-003</td>
+              <td>
+                Farouq Hosam<br />
+                <small>Assuit Egyot</small>
+              </td>
+              <td>Jan 15, 2024 16:20</td>
+              <td><span class="status in-progress">In Progress</span></td>
+              <td class="commission">$15.00</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-004</td>
+              <td>
+                Mariam Ayman<br />
+                <small>Qus Qena Egypt</small>
+              </td>
+              <td>Jan 15, 2024 17:10</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$10.25</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-005</td>
+              <td>
+                Menna Mohamed<br />
+                <small>Assuit Qena</small>
+              </td>
+              <td>Jan 15, 2024 18:00</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$13.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-005</td>
+              <td>
+                Marina Samir<br />
+                <small>Al Qusiyyah Assuit Qena</small>
+              </td>
+              <td>Jan 15, 2024 18:00</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$13.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-005</td>
+              <td>
+                Marina Samir<br />
+                <small>Al Qusiyyah Assuit Qena</small>
+              </td>
+              <td>Jan 15, 2024 18:00</td>
+              <td><span class="status in-progress">In Progress</span></td>
+              <td class="commission">$13.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-005</td>
+              <td>
+                Marina Samir<br />
+                <small>Al Qusiyyah Assuit Qena</small>
+              </td>
+              <td>Jan 15, 2024 18:00</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$13.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-005</td>
+              <td>
+                Marina Samir<br />
+                <small>Al Qusiyyah Assuit Qena</small>
+              </td>
+              <td>Jan 15, 2024 18:00</td>
+              <td><span class="status completed">Completed</span></td>
+              <td class="commission">$13.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+
+            <tr>
+              <td>ORD-2024-005</td>
+              <td>
+                Marina Samir<br />
+                <small>Al Qusiyyah Assuit Qena</small>
+              </td>
+              <td>Jan 15, 2024 18:00</td>
+              <td><span class="status failed">Failed</span></td>
+              <td class="commission">$13.75</td>
+              <td class="actions">📝 🗑️</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container">
+        <button class="btn"><</button>
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">></button>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="foot1">
+          <h3>STOREHUB</h3>
+          <a href="#">
+            <p>Subscribe</p>
+          </a>
+          <a href="#">
+            <p>Get 10% off your first order</p>
+          </a>
+          <input
+            type="email"
+            class="seacrch"
+            placeholder="Enter Your Email : " />
+        </div>
+        <div class="foot2">
+          <h3>Support</h3>
+          <a href="#">
+            <p>NATU - NEW ASSUIT</p>
+          </a>
+          <a href="#">
+            <p>StoreHub@gmail.com</p>
+          </a>
+          <a href="#">
+            <p>+201551803645</p>
+          </a>
+          <a href="#">
+            <p>+201551954315</p>
+          </a>
+        </div>
+        <div class="foot3">
+          <h3>Account</h3>
+          <a href="../account.html">
+            <p>My Account</p>
+          </a>
+          <a href="#">
+            <p>Login / Register</p>
+          </a>
+          <a href="../cart.html">
+            <p>Cart</p>
+          </a>
+          <a href="#">
+            <p>All Product</p>
+          </a>
+          <a href="#">
+            <p>Shop</p>
+          </a>
+        </div>
+        <div class="foot4">
+          <h3>Quick Link</h3>
+          <a href="#">
+            <p>Privacy Policy</p>
+          </a>
+          <a href="#">
+            <p>Terms Of Use</p>
+          </a>
+          <a href="#">
+            <p>FAQ</p>
+          </a>
+          <a href="../contact.html">
+            <p>Contact</p>
+          </a>
+        </div>
+      </div>
+      <p style="text-align: center; padding-bottom: 8px">
+        Copyright &copy;<span> STOREHUB </span>all right reserved
+      </p>
+    </footer>
+    <script src="mainDelivery.js"></script>
+  </body>
+</html>
